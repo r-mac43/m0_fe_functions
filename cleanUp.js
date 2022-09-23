@@ -3,16 +3,17 @@
 // YOUR TASK:
   // Modify the code to make that improvement(s)
   // write a JS comment to explain what you changed, and why
-  // make sure the code you submit WORKS - you can run this entire file 
+  // make sure the code you submit WORKS - you can run this entire file
     // using `node cleanUp.js` or copy and paste into a replit
 
 
-// EX 1:
+// EX 1: Added semi colon outside of nameQuestion function call
 function nameQuestion() {
   console.log("Hello, what is your name?")
 }
 
-nameQuestion()
+nameQuestion();
+
 
 
 // EX 2:
@@ -37,7 +38,7 @@ makeFreshPesto();
 
 
 //  EX 4:
-function average(num1, num2) 
+function average(num1, num2)
   {
 var sum = num1 + num2;
     var avg = sum / 2;
