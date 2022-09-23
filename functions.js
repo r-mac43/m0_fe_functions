@@ -16,32 +16,37 @@ function booksToRead(genre) {
 // I tried this a few time and was able to able to get this to print the company name or
 // write a separate code for the range, but not all three.
 //
-function companyPay(companyName, maxNum, minNum) {
-  var companyName = "Moonpies";
-  var diff = maxNum - minNum;
+function companyPay(companyName, first, second) {
+  var diff = (first - second);
 
   console.log(`Wow, with ${companyName} being such a delicious name for a company, no wonder the pay range is ${diff}!`);
  }
-companyPay(110000, 90000);
+companyPay("Moonpies", 110000, 90000);
 
 // 4: Write a function that satifies the following interaction pattern:
 
 //  I tried multiple ways to figure this one out to satisfy the two Parameters
 // in your example, but I could not get it to run.
 
-function checkStock(amount, item) {
-  var amount = "";
-  var item = "";
-  if (`${amount} === 4 && ${item} == Coffee`) {
-      console.log("Coffee is stocked");
-  } else if (`${amount} === 3 || ${item} === Tortillas`) {
-    console.log("Tortillas-running LOW");
-  } else if (`${amount} === 2 || ${item} === Cheese`) {
-    console.log("Cheese - OUT of stock!");
-  } else if (`${amount} === 1 || ${item} === Salsa`) {
+function checkStock(item, amount) {
+   if (amount >= 4) {
+      console.log(`${item} is stocked`)
+
+   }
+      else if (amount <= 3 && amount >= 1) {
+    console.log(`${item} - running LOW`)
+
+    }
+      else if (amount <= 0) {
+    console.log(`${item} - OUT of stock`)
+    }
   }
 
- checkStock();
+ checkStock("Coffee", 4);
+ checkStock("Tortillas", 1);
+ checkStock("Cheese", 0);
+ checkStock("Salsa", 3);
+
 
 
 checkStock(4, "Coffee");
